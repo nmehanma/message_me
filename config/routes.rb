@@ -11,8 +11,11 @@ Rails.application.routes.draw do
 
   mount ActionCable.server, at: '/cable'
 
+<<<<<<< HEAD
 =======
 >>>>>>> parent of f789e26... adding create and destroy sessions for authentication systems
+=======
+>>>>>>> 8e5644dd17c48d86b6bf7133cf280e65ed9def66
 
   
 end 
