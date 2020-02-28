@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
   # def create
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   def destroy
     session[:user_id] = nil
     flash[:success] = "You have successfully logged out"
@@ -18,6 +19,14 @@ class SessionsController < ApplicationController
   # end
 
   # def destroy
+=======
+  # end
+
+  # def destroy
+
+  # end
+  
+>>>>>>> parent of f789e26... adding create and destroy sessions for authentication systems
 
   # end
   
