@@ -25,22 +25,6 @@ class SessionsController < ApplicationController
     
   end
 
-  # end
-
-  # def destroy
-
-  # end
-
-  # def destroy
-
-  # end
-  
-
-
-  # end
-  
-
-
   private
 
   def logged_in_redirect
