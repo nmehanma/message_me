@@ -5,32 +5,41 @@ class SessionsController < ApplicationController
 
   end
 
-  # def create
+  def create
+    user = User.find_by(username: params[:session][:username])
+    if user && user.authenticate(params[:session][:password])
+      session[:user_id] = user.id
+      flash[:success]= "You have successfully logged in"
+      redirect_to root_path
+    else 
+      flash.now[:error]= "There was something wrong with your login information"
+      render 'new'
+    end
+  end
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   def destroy
     session[:user_id] = nil
     flash[:success] = "You have successfully logged out"
     redirect_to login_path
     
   end
-=======
+
   # end
 
   # def destroy
-=======
+
   # end
 
   # def destroy
 
   # end
   
->>>>>>> parent of f789e26... adding create and destroy sessions for authentication systems
+
 
   # end
   
->>>>>>> parent of f789e26... adding create and destroy sessions for authentication systems
+
 
   private
 
